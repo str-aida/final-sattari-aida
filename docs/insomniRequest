@@ -1,0 +1,222 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: proyectoFinal
+meta:
+  id: wrk_ffa1d36c2f38456ca8c759332c311fa9
+  created: 1764278837921
+  modified: 1764342965824
+  description: ""
+collection:
+  - url: http://localhost:8080/api/productos
+    name: post productos
+    meta:
+      id: req_db164bf0fe8f4aeebc85eaac7788b44a
+      created: 1764278837937
+      modified: 1764342412831
+      isPrivate: false
+      description: ""
+      sortKey: -1764278837937
+    method: POST
+    body:
+      mimeType: application/json
+      text: >2-
+          {
+            "nombre": "Porción de Lemon Pie",
+            "descripcion": "Porción individual de lemon pie con merengue italiano",
+            "cantidad": 30,
+            "precio": 1800.0,
+            "categoria": "porcion"
+          }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/productos
+    name: get productos
+    meta:
+      id: req_98070608ffc1449cabe58c6af3b08f8f
+      created: 1764279251460
+      modified: 1764342264376
+      isPrivate: false
+      description: ""
+      sortKey: -1764279251460
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/pedidos
+    name: post pedidos
+    meta:
+      id: req_eafe693a87014df68793ded292c178d0
+      created: 1764279543558
+      modified: 1764342299280
+      isPrivate: false
+      description: ""
+      sortKey: -1764279044698.5
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "fecha": "2025-11-27",
+          "estado": "PENDIENTE",
+          "detalle": [
+            {
+        			"id":1,
+              "nombreProd": "Cheesecake Clásico",
+              "cantidadProd": 1,
+              "precio": 2300,
+              "subTotal": 2300
+            },
+            {
+        			"id":2,
+              "nombreProd": "Lemon Pie",
+              "cantidadProd": 1,
+              "precio": 1000,
+              "subTotal": 1000
+            }
+          ],
+        	 "total": 3300
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/pedidos
+    name: get pedidos
+    meta:
+      id: req_3683339e4b894cd2b0823fa217f97cd0
+      created: 1764282592133
+      modified: 1764342276097
+      isPrivate: false
+      description: ""
+      sortKey: -1764282592133
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/productos/4
+    name: productos
+    meta:
+      id: req_750efb17a7e0436a832e25e99eea1ba1
+      created: 1764283783246
+      modified: 1764342489278
+      isPrivate: false
+      description: ""
+      sortKey: -1764283783246
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: >2-
+           {
+            "nombre": "Porción de Lemon Pie",
+            "descripcion": "Porción individual de lemon pie con merengue italiano",
+            "cantidad": 30,
+            "precio": 1800.0,
+            "categoria": "porcion"
+          }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/productos/3
+    name: productos
+    meta:
+      id: req_304943a5cda142e8b1f947250b78b61f
+      created: 1764284249300
+      modified: 1764342528835
+      isPrivate: false
+      description: ""
+      sortKey: -1764284249300
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "nombre": "Lemon Pie",
+            "descripcion": "Tarta de limón casera con merengue italiano",
+            "cantidad": 10,
+            "precio": 9500.0,
+            "categoria": "porcion"
+          }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_1327fa3ff998040a81d5fa0019ffcd0169447403
+    created: 1764278837929
+    modified: 1764278837929
+environments:
+  name: Base Environment
+  meta:
+    id: env_1327fa3ff998040a81d5fa0019ffcd0169447403
+    created: 1764278837925
+    modified: 1764278837925
+    isPrivate: false
